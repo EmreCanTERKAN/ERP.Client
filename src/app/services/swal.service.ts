@@ -10,13 +10,13 @@ export class SwalService {
 
   callToast(title:string, icon: SweetAlertIcon= "success"){
     Swal.fire({
-      title:"Example title",
+      title:title,
       text: "",
       timer: 3000,
       showConfirmButton:false,
       toast:true,
       position: "bottom-right",
-      icon : "success"
+      icon : icon
     })
   }
 

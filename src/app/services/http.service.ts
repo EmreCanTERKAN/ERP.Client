@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { api } from '../constants';
 import { ResultModel } from '../models/result.model';
 import { AuthService } from './auth.service';
+import { ErrorService } from './error.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,10 +12,13 @@ export class HttpService {
 
   constructor(
     private http: HttpClient,
-    private auth: AuthService
+    private auth: AuthService,
+    private error: ErrorService
   ) { }
 
-  post<T>(apiUrl:string, body:any, callBack:(res:T)=> void, errorCallBack?:() => void){
+  post<T>(apiUrl:string, body:any, callBack:(res: T)=> void, errorCallBack?:() => void){
+    const fullUrl = `${api}/${apiUrl}`
+    
     this.http.post<ResultModel<T>>(`${api}/${apiUrl}`, body, {
       headers:{
         "Authorization":"Bearer " + this.auth.token
@@ -26,6 +30,7 @@ export class HttpService {
         }
       },
       error: (err:HttpErrorResponse) =>{
+        this.error.errorHandler(err);
         if(errorCallBack){
           errorCallBack();
         }
