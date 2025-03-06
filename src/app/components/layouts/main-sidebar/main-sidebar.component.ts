@@ -6,7 +6,7 @@ import { MenuPipe } from '../../../pipes/menu.pipe';
 
 @Component({
   selector: 'app-main-sidebar',
-  imports: [RouterLink, RouterLinkActive ,FormsModule,MenuPipe],
+  imports: [RouterLink, RouterLinkActive ,FormsModule, MenuPipe],
   templateUrl: './main-sidebar.component.html',
   styleUrl: './main-sidebar.component.css'
 })
