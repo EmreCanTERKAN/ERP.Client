@@ -22,6 +22,9 @@ export class ErrorService {
       this.swal.callToast(errorMessage,"error");
     }else if (err.status === 500){
       this.swal.callToast(err.error.errorMessages[0],"error");
+    }else{
+      errorMessage = 'Beklenmedik bir hata oluştu. Lütfen tekrar deneyin.';
+      this.swal.callToast(errorMessage, "error");
     }
   }
 }

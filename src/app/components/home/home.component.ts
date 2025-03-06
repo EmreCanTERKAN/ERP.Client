@@ -12,9 +12,6 @@ export class HomeComponent {
 
   constructor(
     private swal: SwalService
-  ){
-    this.swal.callSwal("Kaydı sil","Kaydı silmek istiyor musunuz ?", () => {
-      alert("Silme işlemi başarılı");
-    })
-  }
+  ){}
+  
 }
