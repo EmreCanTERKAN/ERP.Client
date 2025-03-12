@@ -1,9 +1,11 @@
-export class CustomerModel{
+import { AddressModel } from "./address.model";
+
+export class CustomerModel {
     id: string = "";
-    name: string = "";
-    taxDepartment: string ="";
+    firstName: string = "";
+    lastName: string = "";
+    fullName: string = "";
+    taxDepartment: string = "";
     taxNumber: string = "";
-    city : string = "";
-    town: string = "";
-    fullAddress: string = "";
+    address: AddressModel = new AddressModel();
 }

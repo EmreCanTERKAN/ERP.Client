@@ -12,12 +12,12 @@ export class CustomerPipe implements PipeTransform {
     }
 
     return value.filter(p => 
-      p.name.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
+      p.fullName.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
       p.taxDepartment.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
       p.taxNumber.toString().includes(search.toLocaleLowerCase()) ||
-      p.fullAddress.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
-      p.city.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
-      p.town.toLocaleLowerCase().includes(search.toLocaleLowerCase())     
+      p.address.fullAddress.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
+      p.address.city.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
+      p.address.town.toLocaleLowerCase().includes(search.toLocaleLowerCase())     
     )
   }
 
