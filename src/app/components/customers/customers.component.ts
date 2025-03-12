@@ -61,7 +61,7 @@ export class CustomerComponent implements OnInit {
 
   update(form : NgForm) {
     if(form.valid){
-      this.http.post<string>("customer/update",this.createModel,(res) => {
+      this.http.post<string>("customer/update",this.updateModel,(res) => {
         this.swal.callToast(res,"info");
         this.updateModalCloseBtn?.nativeElement.click();
         form.resetForm();
@@ -71,7 +71,7 @@ export class CustomerComponent implements OnInit {
   }
 
   get(model:CustomerModel){
-    this.updateModel = {...model};
+    this.updateModel = JSON.parse(JSON.stringify(model));
   }
 
     
