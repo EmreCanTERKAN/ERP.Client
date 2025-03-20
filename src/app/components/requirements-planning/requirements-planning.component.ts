@@ -26,7 +26,7 @@ export class RequirementsPlanningComponent {
   }
 
   get(){
-    this.http.post<RequirementsPlanningModel>("Orders/RequirementsPlanningByOrderId",{orderId: this.orderId}, res=> {
+    this.http.post<RequirementsPlanningModel>("order/requirementsPlanningByOrderId",{orderId: this.orderId}, res=> {
       this.data = res;
     });
   }
