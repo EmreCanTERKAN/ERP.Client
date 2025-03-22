@@ -12,7 +12,7 @@ import { SwalService } from '../../services/swal.service';
   templateUrl: './customers.component.html',
   styleUrl: './customers.component.css'
 })
-export class CustomerComponent implements OnInit {
+export class CustomersComponent implements OnInit {
   customers : CustomerModel[] = [];
   search : string = "";
   createModel: CustomerModel = new CustomerModel();

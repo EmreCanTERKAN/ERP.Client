@@ -2,81 +2,88 @@ export class MenuModel{
     name: string = "";
     icon: string = "";
     url: string = "";
-    isTitle : boolean = false;
+    isTitle: boolean = false;
     subMenus: MenuModel[] = [];
 }
 
-export const Menus : MenuModel[] = [
+export const Menus: MenuModel[] = [
     {
         name: "Ana Sayfa",
         icon: "far fa-solid fa-home",
         url: "/",
         isTitle: false,
-        subMenus:[]
+        subMenus: []
     },
     {
         name: "Ana Group",
-        icon: "fa fa-solid fa-trowel-bricks",
+        icon: "far fa-solid fa-trowel-bricks",
         url: "",
         isTitle: false,
-        subMenus:[
+        subMenus: [
             {
                 name: "Müşteriler",
                 icon: "far fa-solid fa-users",
                 url: "/customers",
                 isTitle: false,
-                subMenus: []
+                subMenus:[]
             },
             {
                 name: "Depolar",
-                icon: "far fa-solid fa-store",
+                icon: "far fa-solid fa-warehouse",
                 url: "/depots",
                 isTitle: false,
-                subMenus: []
+                subMenus:[]
             },
             {
                 name: "Ürünler",
-                icon: "far fa-solid fa-inbox",
+                icon: "far fa-solid fa-boxes-stacked",
                 url: "/products",
                 isTitle: false,
-                subMenus: []
+                subMenus:[]
             },
             {
                 name: "Reçeteler",
-                icon: "far fa-solid fa-table-list",
+                icon: "far fa-solid fa-boxes-packing",
                 url: "/recipes",
                 isTitle: false,
-                subMenus: []
+                subMenus:[]
             },
+        ]
+    },
+    {
+        name: "Siparişler",
+        icon: "far fa-solid fa-clipboard-list",
+        url: "/orders",
+        isTitle: false,
+        subMenus: []
+    },
+    {
+        name: "Faturalar",
+        icon: "far fa-solid fa-file-invoice",
+        url: "/",
+        isTitle: false,
+        subMenus: [
             {
-                name: "Siparişler",
-                icon: "far fa-solid fa-clipboard-list",
-                url: "/orders",
-                isTitle: false,
-                subMenus: []
-            },
-            {
-                name: "Faturalar",
+                name: "Alış Faturaları",
                 icon: "far fa-solid fa-file-invoice",
-                url: "",
+                url: "/invoices/purchase",
                 isTitle: false,
-                subMenus: [
-                    {
-                        name: "Alış Faturaları",
-                        icon: "far fa-solid fa-file-invoice",
-                        url: "/invoices/purchase",
-                        isTitle: false,
-                        subMenus: []
-                    },
-                    {
-                        name: "Satış Faturaları",
-                        icon: "far fa-solid fa-file-invoice",
-                        url: "/invoices/selling",
-                        isTitle: false,
-                        subMenus: []
-                    }
-                ]
+                subMenus: []
+            },
+            {
+                name: "Satış Faturaları",
+                icon: "far fa-solid fa-file-invoice",
+                url: "/invoices/selling",
+                isTitle: false,
+                subMenus: []
             }
         ]
-    }
-];
+    },
+    {
+        name: "Üretim",
+        icon: "far fa-solid fa-screwdriver-wrench",
+        url: "/productions",
+        isTitle: false,
+        subMenus: []
+    },
+]

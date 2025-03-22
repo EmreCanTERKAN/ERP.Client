@@ -158,6 +158,7 @@ export class InvoicesComponent {
   }
 
   update(form: NgForm){
+    console.log("Güncellenen Veri:", this.updateModel);
     if(form.valid){
       this.http.post<string>("invoice/update",this.updateModel,(res)=> {
         this.swal.callToast(res,"info");
