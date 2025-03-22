@@ -1,59 +1,85 @@
-# ERPClient
+# Angular Kargo Takip Uygulaması
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+## 📌 Proje Tanıtımı
 
-## Development server
+Bu proje, kurumsal kaynak planlama (ERP) süreçlerini yönetmek için geliştirilmiş bir Angular 19 uygulamasıdır. Kullanıcılar giriş yaptıktan sonra, admin panelinde müşteri, ürün, sipariş ve üretim süreçlerini yönetebilirler.
 
-To start a local development server, run:
+## 🚀 Özellikler
+
+- **Kullanıcı Girişi:** JWT tabanlı kimlik doğrulama sistemi.
+- **Admin Paneli:** Kullanıcı yönetimi ve kargo takibi için özel bir panel.
+- **Kargo Listesi:** Güncellenebilir ve filtrelenebilir kargo bilgileri.
+- **Responsive Tasarım:** Mobil ve masaüstü uyumlu.
+
+## 📷 Ekran Görüntüleri
+
+### 🔑 Giriş Sayfası
+
+![Login Page](./public/img/erp-login.png)
+
+### 🏠 Müşteri Paneli
+
+![Customer](./public/img/erp-customer.png)
+
+### 📦 Depo Paneli
+
+![Depot](./public/img/erp-depot.png)
+
+### 📦 Fatura Güncelleme Paneli
+
+![Erp Invoce](./public/img/erp-invoice-update.png.png)
+
+### 📦 Sipariş Paneli
+
+![Order](./public/img/erp-order.png)
+
+### 📦 Ürün Paneli
+
+![Product](./public/img/erp-product.png)
+
+### 📦 Üretim Paneli
+
+![production](./public/img/erp-production.png)
+
+### 📦 Reçete Paneli
+
+![recipe](./public/img/erp-recipe.png)
+
+### 📦 Reçete Detay Paneli
+
+![recipedetails](./public/img/erp-recipe-details.png)
+
+### 📦 İhtiyaç Planlama Sayfası Paneli
+
+![recipedetails](./public/img/erp-requirements.png)
+
+
+## 🛠️ Kurulum ve Çalıştırma
+
+Projeyi çalıştırmak için aşağıdaki adımları takip edin:
 
 ```bash
-ng serve
+# Bağımlılıkları yükleyin
+yarn install  # veya npm install
+
+# Uygulamayı çalıştırın
+yarn start  # veya npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Uygulama varsayılan olarak `http://localhost:4200` adresinde çalışacaktır.
 
-## Code scaffolding
+## 🔧 Kullanılan Teknolojiler
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Frontend:** Angular 19, TypeScript
+- **State Management:** RxJS
+- **UI Kütüphanesi:** Bootstrap / Tailwind CSS
+- **Backend:** .NET 9 Web API (OData, MediatR, FluentValidation, Mapster)
+- **Mimari:** Clean Architecture, CQRS Pattern
 
-```bash
-ng generate component component-name
-```
+## 📌 Geliştirici Notları
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Çıkış yapmak için admin panelinde sağ üst köşedeki **Çıkış Yap** butonunu kullanabilirsiniz.
 
-```bash
-ng generate --help
-```
+---
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+📧 İletişim ve geri bildirimleriniz için bana ulaşabilirsiniz!
