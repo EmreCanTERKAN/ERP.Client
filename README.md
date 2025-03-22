@@ -27,7 +27,11 @@ Bu proje, kurumsal kaynak planlama (ERP) süreçlerini yönetmek için geliştir
 
 ### 📦 Fatura Güncelleme Paneli
 
+<<<<<<< HEAD
 ![Erp Invoce](./public/img/erp-invoice-update.png)
+=======
+![Erp Invoce](./public/img/erp-invoice-update.png.png)
+>>>>>>> e79264ee7cac0de409780ad1950fd09a5e82cc71
 
 ### 📦 Sipariş Paneli
 
